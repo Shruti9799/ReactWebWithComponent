@@ -1,0 +1,14 @@
+1.npm init -y
+we're initializing an npm project with default values (-y flag). If you leave -y flag you'll be answering questions interactively. Maybe you should try it :).
+
+2.npm install  express
+
+after run server file
+ 
+auto run after edit code 
+install 
+3.npm install -g nodemon
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
