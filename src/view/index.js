@@ -1,16 +1,19 @@
-import HomeScreen from "./screen/HomeScreen";
-import Context from "./context";
-import {addtocart} from './data'
-import {addtobuy} from './data'
-import Signin from "./screen/Signin";
+
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import RouterNav from "./router";
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 export default function App(){
    
     return(
-        <Context.Provider value={[addtocart,addtobuy]}>
-        <div>
-<Signin/>
-        </div>
-        </Context.Provider>
+        <BrowserRouter>
+        <RouterNav/>
+        </BrowserRouter>
+       
     )
 }

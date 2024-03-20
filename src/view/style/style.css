@@ -3,5 +3,44 @@
     height: 200px;
     background-color: aqua;
     margin-left: 10px;
-    display: inline-block;
+    display: inline-block}
+
+
+/* Homescree */
+.icons-2 img{
+    
+    position: relative;
+    left:500px;
+}
+.contents{
+      font-size:19px;
+      display: inline-flex;
+      justify-content: space-between;
+
+}
+
+/*     primary button */
+
+
+/* size component */
+.size-component {
+           display: inline-flex;
+           
+
+
+}
+    
+
+
+
+
+
+
+.detailimage{
+    display:flex;
+    position:absolute;
+    left:20px;
+    padding-bottom: 20px;
+    
+    
 }
