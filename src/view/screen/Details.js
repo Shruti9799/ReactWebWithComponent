@@ -4,7 +4,7 @@ import { image } from "../assets/image"
 import BannerComponent from '../components/Banner';
 import { icons } from '../assets/icon';
 
-
+import Priceratecomponent from '../components/Priceratecomponent'
 import { String } from "../util/string"
 import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
@@ -66,7 +66,10 @@ function Details(){
              <PrimaryMiddleText 
                title={String.headingdetails}
                 />
-                <p style={{marginTop:40}}><del>Rs.3,198.00</del><br /><span style={{backgroundColor:"pink",position:"relative",top:20,padding:10}}>Rs.1,289.00</span></p>
+              <Priceratecomponent
+                 product={product.rate}
+              />
+               
                </div>
                <div style={{position:"relative",left:60}}>
              <Rating

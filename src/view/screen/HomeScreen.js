@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { banner, banner2 } from '../data';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { product } from '../data';
 import '../style/style.css'
 import Addcart from './Cart'
@@ -23,11 +23,18 @@ const info=[require('../img/Do Epic Shit (Hardcover).jpg')
     require('../img/Nomads (Hardback).jpg')] */
 export default function HomeScreen(){
 
-  
+  const [productdata,setProductData] =useState('')
   
  
-    
+    useEffect(()=>{
 
+      fetch("http://www.localhost:3333/product").then(d=>{
+       return d.json()
+      }).then(d=>setProductData(d[0].data)).catch(d=>console.log(d))
+    },[])
+
+
+    console.log(productdata);
 
   // Catch Rating value
   
@@ -119,11 +126,32 @@ export default function HomeScreen(){
           
           />
           </div>
-          
+          <div>
+            {
+              productdata && productdata.map(d=>{
+                return(
+                  <>
+                  <div style={{marginLeft:20,}}>
+                  <img src={d.image} style={{width:300,height:300}}/>
+                  <br />
+                  <p style={{}}>{d.name}</p>
+                  <div style={{display:'flex'}}>
+                  <p style={{marginLeft:30}}><del>{d.oldrate}</del></p>
+                   <div style={{backgroundColor:'pink',width:100,height:30,alignItems:"center",marginLeft:10}}>
+                  <p>{d.rate}</p>
+                  </div>
+                  </div>
+                  </div>
+                  </>
+                )
+              })
+            }
+          </div>
+          {/* 
           {product.map(value=>(
            <Cardimages product={product} ratingvisible={true}/>
            ))
-          }  
+          }   */}
          
 
 

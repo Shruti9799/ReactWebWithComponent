@@ -44,7 +44,11 @@ export const String={
     
 
      
-    /* footer  */
+    /* Cart  */
+    heading1:"YOUR CART",
+    keys:"PRODUCT",
+    keys2:"QUANTITY",
+    keys3:"TOTAL"
     
 
 
